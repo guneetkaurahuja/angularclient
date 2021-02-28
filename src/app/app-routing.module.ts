@@ -1,10 +1,10 @@
-mport { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserListComponent } from './user-list/user-list.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 import { UserFormComponent } from './user-form/user-form.component';
 
 const routes: Routes = [
-  { path: 'users', component: UserListComponent },
+  { path: 'users', component: UserInfoComponent },
   { path: 'adduser', component: UserFormComponent }
 ];
 

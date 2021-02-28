@@ -1,3 +1,27 @@
-<p>
-  user-info works!
-</p>
+<div class="card my-5">
+  <div class="card-body">
+    <form #userLoginForm="ngForm">
+      <div class="form-group">
+        <label for="emailid">Email</label>
+        <input type="text" [(ngModel)]="user.emailid" 
+          class="form-control" 
+          id="emailid" 
+          name="emailid" 
+          placeholder="Enter your email address"
+          required #emailid="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" [(ngModel)]="user.password" 
+          class="form-control" 
+          id="password" 
+          name="password" 
+          placeholder="Enter your password"
+          required #password="ngModel">
+      </div>
+      <button type="submit" [disabled]="!userLoginForm.form.valid" 
+        class="btn btn-info" (click) = "onLogin()">Login</button>
+
+    </form>
+  </div>
+</div>
